@@ -1,0 +1,56 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMasterPage.master.cs" Inherits="AdminMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+		<title>首页</title>
+		<link rel="stylesheet" href="css/page.css" />
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<script type="text/javascript" src="js/index.js" ></script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <style type="text/css">
+        .center-in-center {
+            width:750px;
+            height:400px;
+            position:absolute;
+            top:50%;
+            left:50%;
+            -webkit-transform:translate(-50%,-50%);
+            -moz-transform:translate(-50%,-50%);
+            -ms-transform:translate(-50%,-50%);
+            -o-transform:translate(-50%,-50%);
+            transform:translate(-50%,-50%);
+        }
+        </style>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="left">
+        <div class="bigTitle" style="width: 250px">个人博客后台管理系统</div>
+			<div class="lines">
+				<div onclick="window.location.href='Default2.aspx'" class="active"><img src="img/icon-1.png" />用户管理</div>
+				<div id="wenzhang" onclick="window.location.href='Article_Manage.aspx'"><img src="img/icon-2.png" />文章管理</div>
+				<div onclick="window.location.href='Sort_Manage.aspx'"><img src="img/icon-3.png" />类别管理</div>
+				<div onclick="pageClick(this)" style="background-color: #333333"><img src="img/icon-4.png" />帖子管理</div>
+				<div onclick="pageClick(this)" style="background-color: #333333"><img src="img/icon-5.png" />维护管理</div>
+			</div>
+		</div>
+		<div class="top" style="text-align: left; vertical-align: top">              
+			<div class="thisUser">当前用户：小ZZ</div></div>
+		         <div class="center-in-center">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+		<div style="text-align:center;">
+    </div>
+    </form>
+</body>
+</html>
+
+
